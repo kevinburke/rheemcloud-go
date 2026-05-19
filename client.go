@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"io"
 	"log/slog"
+	"maps"
 	"net/http"
 	"sync"
 	"sync/atomic"
@@ -161,9 +162,7 @@ func (c *Client) Devices() map[string]*Device {
 	c.mu.Lock()
 	defer c.mu.Unlock()
 	out := make(map[string]*Device, len(c.devices))
-	for k, v := range c.devices {
-		out[k] = v
-	}
+	maps.Copy(out, c.devices)
 	return out
 }
 
@@ -376,9 +375,7 @@ func (c *Client) publish(ctx context.Context, dev *Device, payload map[string]an
 		"device_name":   dev.DeviceID(),
 		"serial_number": dev.SerialNumber(),
 	}
-	for k, v := range payload {
-		out[k] = v
-	}
+	maps.Copy(out, payload)
 	body, err := json.Marshal(out)
 	if err != nil {
 		return err

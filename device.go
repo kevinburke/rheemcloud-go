@@ -2,6 +2,8 @@ package rheemcloud
 
 import (
 	"encoding/json"
+	"maps"
+	"slices"
 	"strconv"
 	"strings"
 	"sync"
@@ -141,9 +143,7 @@ func (d *Device) snapshotInfo() map[string]json.RawMessage {
 	d.mu.Lock()
 	defer d.mu.Unlock()
 	out := make(map[string]json.RawMessage, len(d.info))
-	for k, v := range d.info {
-		out[k] = v
-	}
+	maps.Copy(out, d.info)
 	return out
 }
 
@@ -213,9 +213,7 @@ func mergeIntoObject(existing, update json.RawMessage) (json.RawMessage, bool) {
 		if err := json.Unmarshal(update, &updateObj); err != nil {
 			return nil, false
 		}
-		for k, v := range updateObj {
-			existingObj[k] = v
-		}
+		maps.Copy(existingObj, updateObj)
 	} else {
 		if _, hasValue := existingObj["value"]; hasValue {
 			existingObj["value"] = update
@@ -478,13 +476,7 @@ func (d *Device) SupportedModes() []Mode {
 	}
 	if d.SupportsOnOff() {
 		// Guarantee Off is in the list.
-		hasOff := false
-		for _, m := range out {
-			if m == ModeOff {
-				hasOff = true
-				break
-			}
-		}
+		hasOff := slices.Contains(out, ModeOff)
 		if !hasOff {
 			out = append(out, ModeOff)
 		}

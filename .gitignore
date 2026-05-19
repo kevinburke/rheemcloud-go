@@ -1,3 +1,8 @@
 # Personal/local data — do not commit.
 /var/
 /env/
+
+# CI output directories.
+coverage/
+reports/
+tmp/
