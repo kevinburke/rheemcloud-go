@@ -1,0 +1,3 @@
+# Personal/local data — do not commit.
+/var/
+/env/
