@@ -4,7 +4,7 @@ go 1.26
 
 require (
 	github.com/eclipse/paho.mqtt.golang v1.5.1
-	github.com/kevinburke/rest v0.0.0-20260504163705-04a245549cc6
+	github.com/kevinburke/rest/v2 v2.15.0
 )
 
 require (

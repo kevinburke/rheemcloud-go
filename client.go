@@ -16,7 +16,7 @@ import (
 	"time"
 
 	mqtt "github.com/eclipse/paho.mqtt.golang"
-	"github.com/kevinburke/rest/restclient"
+	"github.com/kevinburke/rest/v2/restclient"
 )
 
 // Errors returned by Client methods.

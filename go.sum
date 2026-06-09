@@ -2,8 +2,8 @@ github.com/eclipse/paho.mqtt.golang v1.5.1 h1:/VSOv3oDLlpqR2Epjn1Q7b2bSTplJIeV2I
 github.com/eclipse/paho.mqtt.golang v1.5.1/go.mod h1:1/yJCneuyOoCOzKSsOTUc0AJfpsItBGWvYpBLimhArU=
 github.com/gorilla/websocket v1.5.3 h1:saDtZ6Pbx/0u+bgYQ3q96pZgCzfhKXGPqt7kZ72aNNg=
 github.com/gorilla/websocket v1.5.3/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
-github.com/kevinburke/rest v0.0.0-20260504163705-04a245549cc6 h1:EuHVhHxqfYDMmrWzOfeoFwg8x51zRexP95t4ypWB024=
-github.com/kevinburke/rest v0.0.0-20260504163705-04a245549cc6/go.mod h1:Fqq3AMJ2uvn3zSO5bO+FIM3gzJcA1+zAPJU2SnrwOuc=
+github.com/kevinburke/rest/v2 v2.15.0 h1:FaOMZqJMoHBSZheqqKWSkh37RksWEKc70douAHFB0wE=
+github.com/kevinburke/rest/v2 v2.15.0/go.mod h1:X3cM9MKkTi8gorCGaMZ9q0/a/y908Ea1pOI9ha4zC7o=
 golang.org/x/net v0.44.0 h1:evd8IRDyfNBMBTTY5XRF1vaZlD+EmWx6x8PkhR04H/I=
 golang.org/x/net v0.44.0/go.mod h1:ECOoLqd5U3Lhyeyo/QDCEVQ4sNgYsqvCZ722XogGieY=
 golang.org/x/sync v0.17.0 h1:l60nONMj9l5drqw6jlhIELNv9I0A4OFgRsG9k2oT9Ug=
